@@ -15,17 +15,17 @@ import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
 
-store.subscribe(() => {
-    const state = store.getState();
-    const visibleExpenses = getVisibileExpenses(state.expenses, state.filters);
-    console.log(visibleExpenses);
-});
+// store.subscribe(() => {
+//     const state = store.getState();
+//     const visibleExpenses = getVisibileExpenses(state.expenses, state.filters);
+//     console.log(visibleExpenses);
+// });
 
-store.dispatch(addExpenses( {description: 'water bill' , amount: 100 , createdAt: 1000 } ));
+// store.dispatch(addExpenses( {description: 'water bill' , amount: 100 , createdAt: 1000 } ));
 
-store.dispatch(addExpenses( {description: 'Gas bill' , amount: 200 , createdAt: -2000 } ));
+// store.dispatch(addExpenses( {description: 'Gas bill' , amount: 200 , createdAt: -2000 } ));
 
-store.dispatch(addExpenses( { description: 'Rent' , amount : 109000 } ) );
+// store.dispatch(addExpenses( { description: 'Rent' , amount : 109000 } ) );
 
 // store.dispatch(setTextFilter( 'bill' ));
 

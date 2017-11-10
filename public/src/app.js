@@ -7,7 +7,7 @@ import configureStore from './stores/configureStore';
 import getVisibileExpenses from './selectors/expenses';
 import expensesReducer from './reducers/expenses';
 import filtersReducer from './reducers/filters';
-import { addExpenses , removeExpense , editExpense }from './actions/expenses';
+import { startSetExpenses }from './actions/expenses';
 import { setTextFilter , sortByAmount , sortByDate , setStartDate , setEndDate } from './actions/filters';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -37,4 +37,10 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'));
+});
+
+

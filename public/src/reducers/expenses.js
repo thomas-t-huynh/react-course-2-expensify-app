@@ -1,4 +1,5 @@
 const expensesReducerDefaultState = [];
+import database from '../firebase/firebase';
 
 export default (state = expensesReducerDefaultState, action) => {
     switch (action.type) {
@@ -20,8 +21,9 @@ export default (state = expensesReducerDefaultState, action) => {
                 } else {
                     return expense;
                     }
-                })
-            
+                });
+        case 'SET_EXPENSES' :
+                return action.expenses;
         default: 
             return state;
     }

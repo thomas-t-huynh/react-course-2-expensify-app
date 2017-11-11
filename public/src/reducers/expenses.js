@@ -1,5 +1,5 @@
 const expensesReducerDefaultState = [];
-import database from '../firebase/firebase';
+
 
 export default (state = expensesReducerDefaultState, action) => {
     switch (action.type) {

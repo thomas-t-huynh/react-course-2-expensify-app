@@ -154,7 +154,6 @@ test ('should edit expenses from firebase', (done) => {
     store.dispatch(startEditExpense( id , updates )).then(() => {
         const actions = store.getActions();
         expect(actions[0]).toEqual({
-            
             type: 'EDIT_EXPENSE',
             id,
             updates

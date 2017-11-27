@@ -14,6 +14,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from  './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
@@ -22,15 +23,6 @@ store.subscribe(() => {
     const visibleExpenses = getVisibileExpenses(state.expenses, state.filters);
     console.log(visibleExpenses);
 });
-
-// store.dispatch(addExpenses( {description: 'water bill' , amount: 100 , createdAt: 1000 } ));
-
-// store.dispatch(addExpenses( {description: 'Gas bill' , amount: 200 , createdAt: -2000 } ));
-
-// store.dispatch(addExpenses( { description: 'Rent' , amount : 109000 } ) );
-
-// store.dispatch(setTextFilter( 'bill' ));
-
 
 const jsx = (
     <Provider store={store}>
@@ -48,7 +40,7 @@ const renderApp = () => {
 };
 
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 
 

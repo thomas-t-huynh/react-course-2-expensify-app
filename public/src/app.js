@@ -9,7 +9,6 @@ import expensesReducer from './reducers/expenses';
 import filtersReducer from './reducers/filters';
 import { startSetExpenses }from './actions/expenses';
 import { login , logout } from './actions/auth';
-import { setTextFilter , sortByAmount , sortByDate , setStartDate , setEndDate } from './actions/filters';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';

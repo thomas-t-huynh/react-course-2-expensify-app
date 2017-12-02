@@ -22,3 +22,19 @@
 .button--modal {
     margin:0 $s-size;
 }
+
+.google-button {
+    background-image: url('/images/gLogin.png');
+    background-size: contain;
+    border: none;
+    height: 60px;
+    width: 175px;
+}
+
+.fb-button {
+    background-image: url('/images/fbLogin.png');
+    background-size: contain;
+    border: none;
+    height: 30px;
+    width: 185px;
+}

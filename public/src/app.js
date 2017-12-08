@@ -48,9 +48,7 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(login(user.uid));
         store.dispatch(startSetExpenses()).then(() => {
             renderApp();
-            if (history.location.pathname === '/') {
-                history.push('/dashboard');
-            }
+             history.push('/');
          });
         console.log('log in. UID:', user.uid );
     } else {

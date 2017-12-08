@@ -4,11 +4,13 @@ export default (state ={}, action) => {
 
         case 'LOGIN' :
             return {
-            uid: action.uid
-        };
+                uid: action.uid,
+            };
 
         case 'LOGOUT':
-            return {};
+            return {
+
+            };
             
         default:
             return state;

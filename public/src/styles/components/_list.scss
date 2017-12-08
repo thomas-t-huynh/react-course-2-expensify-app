@@ -16,7 +16,6 @@
 
 .list-item {
     display: flex;
-    flex-direction: column;
     border: 1px solid darken($off-white, 7%);
     border-top: none;
     color: $dark-grey;
@@ -58,6 +57,6 @@
     margin: $s-size 0 0 0;
     @media (min-width: $desktop-breakpoint) {
         margin: 0;
-        padding-left: $s-size;
     }
+    
 }

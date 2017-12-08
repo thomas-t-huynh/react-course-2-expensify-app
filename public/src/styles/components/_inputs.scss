@@ -15,4 +15,15 @@
 .textarea {
     @extend .text-input;
     height: 10rem;
+    resize: none;
+}
+
+.text-title {
+    @extend .text-input;
+    width: 665px;
+}
+
+.text-button-flex {
+    display: flex;
+    justify-content: space-between;
 }
